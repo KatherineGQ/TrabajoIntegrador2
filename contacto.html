@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce - Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo.jpeg" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="alta.html">Nuevo Producto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="busqueda-container">
+            <form action="#" method="get">
+                <input type="text" placeholder="Buscar productos" required>
+                <button type="submit">Buscar</button>
+            </form>
+            </div>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h1>Contacto</h1>
+            <form id="form-contacto" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre-contacto">Nombre:</label>
+                    <input type="text" id="nombre-contacto" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email-contacto">E-mail:</label>
+                    <input type="email" id="email-contacto" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contenido">
+            <p>&copy;2026 AURA NEU.</p>
+            <p>Proyecto Integrador desde una mirada neurodivergente.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

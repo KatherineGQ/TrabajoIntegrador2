@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const express = require('express');
@@ -14,8 +15,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Servir archivos estáticos del frontend
-const frontendPath = path.join(__dirname, '../frontend');
+// Determinar la ubicación de los archivos estáticos del frontend
+let frontendPath = path.join(__dirname, 'frontend');
+if (!fs.existsSync(frontendPath)) {
+  frontendPath = path.join(__dirname, '../frontend');
+}
 app.use(express.static(frontendPath));
 
 // Rutas de la API (RESTful)

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA NEU - Gestión de Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo.jpeg" alt="Logo AURA NEU">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="alta.html">Nuevo Producto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="header-acciones">
+            <div class="busqueda-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Buscar productos">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <button class="btn-carrito btn-abrir-carrito" title="Ver carrito">
+                🛒 Carrito <span class="badge-carrito">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h1>Gestión de Productos</h1>
+            <p>Ingresa o actualiza un producto para el catálogo de la tienda.</p>
+            <form id="form-alta">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio ($CLP)</label>
+                    <input type="number" id="precio" name="precio" step="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="stock">Stock</label>
+                    <input type="number" id="stock" name="stock" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" name="marca" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <input type="text" id="categoria" name="categoria" required>
+                </div>
+                <div class="form-group">
+                    <label for="desc-corta">Descripción corta</label>
+                    <input type="text" id="desc-corta" name="desc-corta" required>
+                </div>
+                <div class="form-group">
+                    <label for="desc-larga">Descripción larga</label>
+                    <textarea id="desc-larga" name="desc-larga" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="envio">Envío sin cargo</label>
+                    <select id="envio" name="envio" required>
+                        <option value="">Seleccione</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edad-desde">Edad desde</label>
+                    <input type="number" id="edad-desde" name="edad-desde" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad-hasta">Edad hasta</label>
+                    <input type="number" id="edad-hasta" name="edad-hasta" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto">Foto del producto (opcional)</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                </div>
+                <button type="submit" class="btn-enviar">Guardar Producto</button>
+            </form>
+        </section>
+
+        <!-- Tabla interactiva para CRUD completo (Ver, Editar, Eliminar) -->
+        <section class="gestion-container">
+            <h2>Productos Registrados en Base de Datos</h2>
+            <div class="tabla-responsive">
+                <table class="tabla-productos">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-productos-body">
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 20px;">Cargando productos...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Drawer del Carrito -->
+    <div id="modal-carrito" class="modal-overlay">
+        <div class="carrito-drawer">
+            <div class="carrito-header">
+                <h2>Carrito de Compras</h2>
+                <button id="btn-cerrar-carrito" class="btn-cerrar-carrito">&times;</button>
+            </div>
+            <div id="carrito-items-lista" class="carrito-items"></div>
+            <div class="carrito-footer">
+                <div class="carrito-total-fila">
+                    <span>Total:</span>
+                    <span id="carrito-total-monto">$0</span>
+                </div>
+                <button id="btn-checkout" class="btn-checkout">Finalizar Compra / Enviar Pedido</button>
+                <button id="btn-vaciar-carrito" class="btn-vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contenido">
+            <p>&copy;2026 AURA NEU.</p>
+            <p>Proyecto Integrador desde una mirada neurodivergente.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

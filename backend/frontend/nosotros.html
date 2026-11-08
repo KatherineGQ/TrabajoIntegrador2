@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA NEU - Nosotros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo.jpeg" alt="Logo AURA NEU">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="alta.html">Nuevo Producto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="header-acciones">
+            <div class="busqueda-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Buscar productos">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <button class="btn-carrito btn-abrir-carrito" title="Ver carrito">
+                🛒 Carrito <span class="badge-carrito">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-container about-section">
+            <h1>Sobre Nosotros</h1>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Bienvenidos a nuestro espacio. Nacimos con el propósito fundamental de ofrecer un refugio seguro y herramientas de apoyo sensorial pensadas desde y para la comunidad neurodivergente. Sabemos que el entorno cotidiano puede presentar desafíos de sobrecarga, por lo que cada artículo de nuestro catálogo es seleccionado cuidadosamente para promover la calma, la regulación y el bienestar diario.
+                    </p>
+                    <p>
+                        Nuestro compromiso es visibilizar las necesidades de procesamiento sensorial, ofreciendo productos funcionales, discretos y de alta calidad que respeten la neurodiversidad en todas sus formas.
+                    </p>
+                    <h2>Nuestros Valores</h2>
+                    <ul>
+                        <li><strong>Empatía y Respeto:</strong> Entendemos y validamos las distintas formas de experimentar el mundo.</li>
+                        <li><strong>Accesibilidad Visual:</strong> Diseñamos pensando en la reducción de la fatiga sensorial (paletas pasteles y entornos amigables).</li>
+                        <li><strong>Calidad y Seguridad:</strong> Artículos confiables y seguros para el uso cotidiano y la autorregulación.</li>
+                    </ul>
+                </div>
+                
+                <div class="about-image">
+                    <img src="img/Nosotros.jpeg" alt="Espacio y productos sensoriales AURA NEU">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Drawer del Carrito -->
+    <div id="modal-carrito" class="modal-overlay">
+        <div class="carrito-drawer">
+            <div class="carrito-header">
+                <h2>Carrito de Compras</h2>
+                <button id="btn-cerrar-carrito" class="btn-cerrar-carrito">&times;</button>
+            </div>
+            <div id="carrito-items-lista" class="carrito-items"></div>
+            <div class="carrito-footer">
+                <div class="carrito-total-fila">
+                    <span>Total:</span>
+                    <span id="carrito-total-monto">$0</span>
+                </div>
+                <button id="btn-checkout" class="btn-checkout">Finalizar Compra / Enviar Pedido</button>
+                <button id="btn-vaciar-carrito" class="btn-vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contenido">
+            <p>&copy; 2026 AURA NEU.</p>
+            <p>Proyecto Integrador desde una mirada neurodivergente.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce - Contacto</title>
+    <title>AURA NEU - Contacto</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
             <a href="index.html">
-                <img src="img/logo.jpeg" alt="Logo">
+                <img src="img/logo.jpeg" alt="Logo AURA NEU">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Catálogo</a></li>
                 <li><a href="alta.html">Nuevo Producto</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
-        <div class="busqueda-container">
-            <form action="#" method="get">
-                <input type="text" placeholder="Buscar productos" required>
-                <button type="submit">Buscar</button>
-            </form>
+        <div class="header-acciones">
+            <div class="busqueda-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Buscar productos">
+                    <button type="submit">Buscar</button>
+                </form>
             </div>
+            <button class="btn-carrito btn-abrir-carrito" title="Ver carrito">
+                🛒 Carrito <span class="badge-carrito">0</span>
+            </button>
+        </div>
     </header>
 
     <main>
         <section class="form-container">
             <h1>Contacto</h1>
-            <form id="form-contacto" action="#" method="POST">
+            <form id="form-contacto">
                 <div class="form-group">
                     <label for="nombre-contacto">Nombre:</label>
                     <input type="text" id="nombre-contacto" name="nombre" required>
@@ -52,6 +57,25 @@
             </form>
         </section>
     </main>
+
+    <!-- Modal Drawer del Carrito -->
+    <div id="modal-carrito" class="modal-overlay">
+        <div class="carrito-drawer">
+            <div class="carrito-header">
+                <h2>Carrito de Compras</h2>
+                <button id="btn-cerrar-carrito" class="btn-cerrar-carrito">&times;</button>
+            </div>
+            <div id="carrito-items-lista" class="carrito-items"></div>
+            <div class="carrito-footer">
+                <div class="carrito-total-fila">
+                    <span>Total:</span>
+                    <span id="carrito-total-monto">$0</span>
+                </div>
+                <button id="btn-checkout" class="btn-checkout">Finalizar Compra / Enviar Pedido</button>
+                <button id="btn-vaciar-carrito" class="btn-vaciar-carrito">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-contenido">

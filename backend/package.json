@@ -1,0 +1,25 @@
+{
+  "name": "aura-neu-ecommerce-backend",
+  "version": "1.0.0",
+  "description": "Backend E-commerce AURA NEU - Trabajo Integrador Etapa 2",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongodb",
+    "mvc",
+    "ecommerce"
+  ],
+  "author": "Katherine",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  }
+}

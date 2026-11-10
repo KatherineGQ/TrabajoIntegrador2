@@ -1,0 +1,39 @@
+======================================================================
+TRABAJO INTEGRADOR - ETAPA 2
+E-COMMERCE AURA NEU (PRODUCTOS SENSORIALES Y BIENESTAR)
+======================================================================
+
+Estudiante: Katherine Guerrero
+
+----------------------------------------------------------------------
+ENLACES DE ENTREGA:
+----------------------------------------------------------------------
+1. Despliegue en Railway (Producción en la nube):
+   https://trabajointegrador2-production.up.railway.app/
+
+2. Repositorio en GitHub:
+   https://github.com/KatherineGQ/TrabajoIntegrador2
+
+3. Código fuente:
+   Adjunto en el archivo entrega-etapa2.zip (sin node_modules)
+
+----------------------------------------------------------------------
+RUTAS PRINCIPALES DE LA APLICACIÓN:
+----------------------------------------------------------------------
+• Catálogo interactivo y Carrito de compras:
+  https://trabajointegrador2-production.up.railway.app/
+
+• Gestión de Productos (Panel CRUD: Alta, Edición y Baja):
+  https://trabajointegrador2-production.up.railway.app/alta.html
+
+• API RESTful de Productos:
+  - GET    /api/productos       (Listar todos los productos)
+  - GET    /api/productos/:id   (Obtener producto por ID)
+  - POST   /api/productos       (Crear nuevo producto)
+  - PUT    /api/productos/:id   (Actualizar producto existente)
+  - DELETE /api/productos/:id   (Eliminar producto)
+
+• API RESTful de Carrito:
+  - POST   /api/carrito         (Recepción de array JSON, log en consola, persistencia en DB y vaciado en cliente)
+  - GET    /api/carrito         (Consultar pedidos almacenados)
+
